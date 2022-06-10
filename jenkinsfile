@@ -3,4 +3,9 @@ pipeline {
 
     stages {
         stpes {
-	    withMaven()
+	    withMaven(maven : 'maven-3.8.1') {
+	        sh 'mvn clean compile'
+	    }
+	}
+    }
+}
